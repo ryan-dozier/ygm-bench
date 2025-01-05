@@ -166,6 +166,7 @@ int main(int argc, char **argv) {
     output["SHM_SKIP_COUNT"]               = boost::json::array();
     output["INSERTIONS"]       = params.local_updates * world.size();
     output["REDUCING_ADAPTER"] = params.use_reducing_adapter;
+    
     if (params.dist == parameters_t::distribution::uniform) {
       output["GENERATOR"] = "UNIFORM";
     } else if (params.dist == parameters_t::distribution::rmat) {
