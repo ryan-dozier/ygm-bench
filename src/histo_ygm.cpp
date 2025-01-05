@@ -158,7 +158,12 @@ int main(int argc, char **argv) {
     output["MAX_WAITSOME_ISEND_IRECV"]     = boost::json::array();
     output["MAX_WAITSOME_IALLREDUCE"]      = boost::json::array();
     output["COUNT_IALLREDUCE"]             = boost::json::array();
-    output["TABLE_SIZE"]                   = global_table_size;
+    output["SHM_SEND_COUNT"]               = boost::json::array();
+    output["SHM_SEND_BYTES"]               = boost::json::array();
+    output["SHM_RECV_COUNT"]               = boost::json::array();
+    output["SHM_RECV_BYTES"]               = boost::json::array();
+    output["SHM_PANIC_COUNT"]              = boost::json::array();
+    output["SHM_SKIP_COUNT"]               = boost::json::array();
     output["INSERTIONS"]       = params.local_updates * world.size();
     output["REDUCING_ADAPTER"] = params.use_reducing_adapter;
     if (params.dist == parameters_t::distribution::uniform) {
