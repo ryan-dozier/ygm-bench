@@ -164,6 +164,8 @@ int main(int argc, char **argv) {
     output["SHM_RECV_BYTES"]               = boost::json::array();
     output["SHM_PANIC_COUNT"]              = boost::json::array();
     output["SHM_SKIP_COUNT"]               = boost::json::array();
+    output["SHM_WAIT_TIME_SUM"]            = boost::json::array();
+    output["SHM_WAIT_TIME_MAX"]            = boost::json::array();
     output["TABLE_SIZE"]                   = global_table_size;
     output["INSERTIONS"]       = params.local_updates * world.size();
     output["REDUCING_ADAPTER"] = params.use_reducing_adapter;
